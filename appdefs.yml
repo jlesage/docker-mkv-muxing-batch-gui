@@ -1,0 +1,44 @@
+---
+
+#
+# Definitions for MKV Muxing Batch GUI docker container.
+#
+# This file is used as data source to generate README.md and unRAID template files
+# from Jinja2 templates.
+#
+
+app:
+  id: 27
+  name: mkv-muxing-batch-gui
+  friendly_name: MKV Muxing Batch GUI
+  gui_type: x11
+  base_os: alpine
+  project:
+    description: |-
+      App for muxing (merging) videos with subtitles, audios, chapters and
+      attachments with many options.
+    url: https://github.com/yaser01/mkv-muxing-batch-gui
+  unraid:
+    #support_url: https://forums.unraid.net/topic/XXXXX-support-mkv-muxing-batch-gui/
+    category: MediaApp:Video
+  documentation:
+  changelog:
+    - version: 23.12.1
+      date: 2023-12-10
+      changes:
+        - 'Initial release.'
+
+container:
+  storage_permissions: rw
+
+  # Environment variables.
+  environment_variables: []
+
+  # Volumes
+  volumes: []
+
+  # Network ports
+  ports: []
+
+  # Devices
+  devices: []
