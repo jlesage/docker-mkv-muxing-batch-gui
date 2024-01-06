@@ -8,7 +8,7 @@
 ARG DOCKER_IMAGE_VERSION=
 
 # Define software versions.
-ARG MKV_MUXING_BATCH_GUI_VERSION=2.3
+ARG MKV_MUXING_BATCH_GUI_VERSION=2.4.1
 
 # Define software download URLs.
 ARG MKV_MUXING_BATCH_GUI_URL=https://github.com/yaser01/mkv-muxing-batch-gui/archive/refs/tags/${MKV_MUXING_BATCH_GUI_VERSION}.tar.gz
@@ -25,8 +25,8 @@ RUN \
     rm /opt/mkv-muxing-batch-gui/Resources/Tools/Linux/* && \
     ln -s /usr/bin/mkvmerge /opt/mkv-muxing-batch-gui/Resources/Tools/Linux/mkvmerge && \
     ln -s /usr/bin/mkvpropedit /opt/mkv-muxing-batch-gui/Resources/Tools/Linux/mkvpropedit && \
-    # Do no force any theme.
-    sed -i 's/^set_application_style()$/#set_application_style()/' /opt/mkv-muxing-batch-gui/packages/Startup/MainApplication.py
+    # Remove the theme button.
+    sed -i '/theme_button/d' /opt/mkv-muxing-batch-gui/packages/Tabs/TabsManager.py
 
 # Pull base image.
 FROM jlesage/baseimage-gui:alpine-3.18-v4.5.2
@@ -42,11 +42,14 @@ RUN \
     add-pkg \
         py3-qt5 \
         py3-psutil \
-        py3-pyside2 \
+        py3-pyside6 \
         mesa-dri-gallium \
         mkvtoolnix \
         # Needed for dark mode support.
         adwaita-qt \
+        # Needed for config file handling.
+        jq \
+        moreutils \
     && \
     # Save some space by removing unused DRI drivers.
     find /usr/lib/xorg/modules/dri/ -type f ! -name swrast_dri.so -exec echo "Removing {}..." ';' -delete
