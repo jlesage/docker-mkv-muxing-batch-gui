@@ -14,7 +14,7 @@ ARG MKV_MUXING_BATCH_GUI_VERSION=2.4.1
 ARG MKV_MUXING_BATCH_GUI_URL=https://github.com/yaser01/mkv-muxing-batch-gui/archive/refs/tags/${MKV_MUXING_BATCH_GUI_VERSION}.tar.gz
 
 # Build MKV Muxing Batch GUI.
-FROM --platform=$BUILDPLATFORM alpine:3.18 AS mkv-muxing-batch-gui
+FROM --platform=$BUILDPLATFORM alpine:3.19 AS mkv-muxing-batch-gui
 ARG MKV_MUXING_BATCH_GUI_URL
 RUN \
     # Download.
@@ -29,7 +29,7 @@ RUN \
     sed -i '/theme_button/d' /opt/mkv-muxing-batch-gui/packages/Tabs/TabsManager.py
 
 # Pull base image.
-FROM jlesage/baseimage-gui:alpine-3.18-v4.5.2
+FROM jlesage/baseimage-gui:alpine-3.19-v4.5.3
 
 ARG MKV_MUXING_BATCH_GUI_VERSION
 ARG DOCKER_IMAGE_VERSION
