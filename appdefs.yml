@@ -29,7 +29,7 @@ app:
         - 'Updated MKV Muxing Batch GUI to version 2.4.1.'
         - 'Updated baseimage to version 4.5.3, based on Alpine Linux 3.19, which brings the following changes:'
         - '2:Disabled fullscreen support when page is loaded into an iFrame.'
-        - '2:Rebuild against latest distro images to get security fixes.'
+        - '2:Rebuilt against latest distro images to get security fixes.'
     - version: 23.12.1
       date: 2023-12-10
       changes:
