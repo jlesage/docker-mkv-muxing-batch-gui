@@ -8,7 +8,7 @@
 ARG DOCKER_IMAGE_VERSION=
 
 # Define software versions.
-ARG MKV_MUXING_BATCH_GUI_VERSION=2.4.1
+ARG MKV_MUXING_BATCH_GUI_VERSION=2.4.2
 
 # Define software download URLs.
 ARG MKV_MUXING_BATCH_GUI_URL=https://github.com/yaser01/mkv-muxing-batch-gui/archive/refs/tags/${MKV_MUXING_BATCH_GUI_VERSION}.tar.gz
