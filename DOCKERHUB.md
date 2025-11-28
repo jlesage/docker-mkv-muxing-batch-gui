@@ -12,6 +12,8 @@ This is a Docker container for [MKV Muxing Batch GUI](https://github.com/yaser01
 The graphical user interface (GUI) of the application can be accessed through a
 modern web browser, requiring no installation or configuration on the client
 
+> This Docker container is entirely unofficial and not made by the creators of MKV Muxing Batch GUI.
+
 ---
 
 [![MKV Muxing Batch GUI logo](https://images.weserv.nl/?url=raw.githubusercontent.com/jlesage/docker-templates/master/jlesage/images/mkv-muxing-batch-gui-icon.png&w=110)](https://github.com/yaser01/mkv-muxing-batch-gui)[![MKV Muxing Batch GUI](https://images.placeholders.dev/?width=640&height=110&fontFamily=monospace&fontWeight=400&fontSize=52&text=MKV%20Muxing%20Batch%20GUI&bgColor=rgba(0,0,0,0.0)&textColor=rgba(121,121,121,1))](https://github.com/yaser01/mkv-muxing-batch-gui)
