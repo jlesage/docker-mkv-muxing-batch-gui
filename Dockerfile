@@ -29,7 +29,7 @@ RUN \
     sed -i '/theme_button/d' /opt/mkv-muxing-batch-gui/packages/Tabs/TabsManager.py
 
 # Pull base image.
-FROM jlesage/baseimage-gui:alpine-3.19-v4.10.6
+FROM jlesage/baseimage-gui:alpine-3.19-v4.11.0
 
 ARG MKV_MUXING_BATCH_GUI_VERSION
 ARG DOCKER_IMAGE_VERSION
